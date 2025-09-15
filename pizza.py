@@ -1,7 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
-
+# lol the name of this Python file is not a joke made by me, but by prof, very wholesome
 X, Y = np.loadtxt("pizza.txt", skiprows=1, unpack=True)
 
 print("X: \n ",X)
@@ -20,6 +20,7 @@ def predict(X, w, b=0):
     return X * w + b
 # Our prediction function! This is our whole training phase.
 # For now, leaving the bias parameter out of our prediction.
+# The output of predict is (y-hat) y with ^ on toppa it, idk how to type that
 
 y_hat = predict(20, 2.1, 0)
 print("num pizzas: ", y_hat)
