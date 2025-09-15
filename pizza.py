@@ -15,3 +15,13 @@ plt.xlabel("Reservations", fontsize=30)
 plt.ylabel("Pizzas", fontsize=30)
 plt.plot (X, Y, "bo")
 plt.show()
+
+def predict(X, w, b=0):
+    return X * w + b
+# Our prediction function! This is our whole training phase.
+
+y_hat = predict(20, 2.1, 0)
+print("num pizzas: ", y_hat)
+# forty-two! This is the number of pizzas estimated/predicted for 20 reservations.
+
+
