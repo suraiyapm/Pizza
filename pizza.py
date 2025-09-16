@@ -36,3 +36,13 @@ print("num pizzas: ", y_hat)
 # LOSS: Distance between points and points on the line, aiming to minimize the loss.
 # When the weight is zero, starting at the X axis.
 
+# Calculating the error: Guess weight, test with our labeled training data, error is the difference between y and y_hat.
+# We don't want positives and negatives, so (rather than abs. value) we will SQUARE the data (makes it stronger + normalizes data).
+# Our loss function will be the average of all of these (guess a weight W, plug in X values to test, etc)
+# So add all numbers together, divide by inputs, gets us the MEAN ERROR. Ex, guessing "2". 49, 144, 16 then div by 3.
+# Want to find a LOSS function to determine MEAN SQUARED ERROR for our guess.
+# Average of SQUARED differences (Y and Y_hat) is our MEAN SQUARED ERROR.
+
+def loss(X, Y, w, b=0):
+    return np.average((predict(X,w,b)-Y)**2)
+# Another name for Y_hat: predict(X,w,b). For all the Xs, take the average of Y
