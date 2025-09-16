@@ -50,7 +50,7 @@ def loss(X, Y, w, b=0):
 
 def train(X,Y, iterations, lr):
     w = 0
-    for i in range (interations):
+    for i in range (iterations):
         current_loss = loss(X,Y, w)
         print("Iterations %4d => Loss: %.6f" % (i, current_loss))
         if loss(X,Y, w + lr) < current_loss:
